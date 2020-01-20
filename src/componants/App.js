@@ -1,11 +1,10 @@
 import React from 'react';
-import jokes from '../apis/jokes';
 import ParamsBar from './ParamsBar';
-import Favorites from './Favorites';
+import FavoritesDisplay from './FavoritesDisplay';
 import JokesDisplay from './JokesDisplay';
 
 class App extends React.Component {
-  state = { jokes: [] };
+  state = { jokes: [], favorites: [] };
   render() {
     return (
       <div>
@@ -15,7 +14,7 @@ class App extends React.Component {
           }}
         />
         <JokesDisplay jokes={this.state.jokes} />
-        <Favorites />
+        <FavoritesDisplay />
       </div>
     );
   }

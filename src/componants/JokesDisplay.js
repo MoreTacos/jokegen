@@ -3,9 +3,19 @@ import React from 'react';
 const JokesDisplay = props => {
   if (props.jokes.data) {
     const list = props.jokes.data.value.map(el => {
-      return <div>{el.joke}</div>;
+      console.log(el.id);
+      return (
+        <div id={el.id} key={el.id}>
+          <button>Fav</button>
+          <p>{el.joke}</p>
+        </div>
+      );
     });
-    return <div>{list}</div>;
+    return (
+      <div>
+        <div>{list}</div>
+      </div>
+    );
   } else {
     return <div>Press Generate</div>;
   }

@@ -2,7 +2,7 @@ import React from 'react';
 import jokesApi from '../apis/jokes';
 
 class ParamsBar extends React.Component {
-  state = { number: 1, categorie: [] };
+  state = { number: 1 };
 
   numberChange = event => {
     this.setState({ number: event.target.value });
@@ -23,7 +23,6 @@ class ParamsBar extends React.Component {
             value={this.state.number}
             type="number"
           ></input>
-          <input type="text"></input>
         </form>
       </div>
     );
