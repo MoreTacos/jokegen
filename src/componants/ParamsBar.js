@@ -1,26 +1,30 @@
 import React from 'react';
-import jokes from '../apis/jokes';
+import jokesApi from '../apis/jokes';
 
 class ParamsBar extends React.Component {
   state = { number: 1, categorie: [] };
-  numberChange() {
-    this.setState({ number: 5 });
-  }
-  async onClick() {
-    const joke = await jokes.get(`jokes/random/3`);
-    console.log(joke);
-  }
+
+  numberChange = event => {
+    this.setState({ number: event.target.value });
+  };
+
+  onClick = async () => {
+    const jokes = await jokesApi.get(`jokes/random/${this.state.number}`);
+    this.props.setState({ jokes });
+  };
 
   render() {
     return (
       <div>
         <button onClick={this.onClick}>Generate</button>
-        <input
-          onChange={this.numberChange}
-          value={this.state.number}
-          type="number"
-        ></input>
-        <input type="text"></input>
+        <form>
+          <input
+            onChange={this.numberChange}
+            value={this.state.number}
+            type="number"
+          ></input>
+          <input type="text"></input>
+        </form>
       </div>
     );
   }

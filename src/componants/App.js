@@ -12,11 +12,18 @@ jokes
   })
   .then(res => console.log(res));
 class App extends React.Component {
-  state = { joke: [] };
+  state = { jokes: [] };
+  componentDidUpdate() {
+    console.log(this.state.jokes);
+  }
   render() {
     return (
       <div>
-        <ParamsBar />
+        <ParamsBar
+          setState={p => {
+            this.setState(p);
+          }}
+        />
         <JokesDisplay jokes={this.state.jokes} />
         <Favorites />
       </div>
