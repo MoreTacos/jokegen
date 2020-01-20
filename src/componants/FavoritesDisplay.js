@@ -11,7 +11,7 @@ class Favorites extends React.Component {
       <div>
         <FavoritesList />
         <div>{this.state.current}</div>
-        <button onClick={this.changeCurrent}>Click me</button>
+        {/* <button onClick={this.changeCurrent}>Click me</button> */}
       </div>
     );
   }
