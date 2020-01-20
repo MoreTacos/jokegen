@@ -4,7 +4,7 @@ import FavoritesDisplay from './FavoritesDisplay';
 import JokesDisplay from './JokesDisplay';
 
 class App extends React.Component {
-  state = { jokes: [], favorites: [] };
+  state = { jokes: [], favorites: [200] };
   render() {
     return (
       <div>
@@ -14,7 +14,7 @@ class App extends React.Component {
           }}
         />
         <JokesDisplay jokes={this.state.jokes} />
-        <FavoritesDisplay />
+        <FavoritesDisplay favorites={this.state.favorites} />
       </div>
     );
   }
