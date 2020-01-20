@@ -1,5 +1,8 @@
 import React from 'react';
 import jokes from '../apis/jokes';
+import ParamsBar from './ParamsBar';
+import Favorites from './Favorites';
+
 jokes
   .get('jokes/random', {
     params: {
@@ -11,8 +14,9 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <div>Yes</div>
-        <div>No</div>
+        <ParamsBar />
+        <div>DISPLAY JOKE</div>
+        <Favorites />
       </div>
     );
   }
