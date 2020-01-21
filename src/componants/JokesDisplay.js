@@ -4,19 +4,20 @@ const JokesDisplay = props => {
   if (props.jokes) {
     const list = props.jokes.map(el => {
       return (
-        <div key={el.id}>
+        <div class="joke" key={el.id}>
           <button onClick={() => props.newFavorite(el.id)}>Fav</button>
           <p>{el.joke}</p>
         </div>
       );
     });
     return (
-      <div>
+      <div class="main">
+        <p>Jokes</p>
         <div>{list}</div>
       </div>
     );
   } else {
-    return <div>Press Generate</div>;
+    return <div class="main">Press Generate</div>;
   }
 };
 

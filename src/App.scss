@@ -8,7 +8,12 @@
 .button {
   cursor: pointer;
   padding: 1rem;
-  border-radius: 100%;
+  border-radius: 20%;
+  border: none;
+  margin: 1rem;
+}
+.button:hover {
+  background: red;
 }
 
 .nav {
@@ -17,6 +22,29 @@
   justify-content: left;
   .input {
     height: 100%;
+    width: 20%;
     padding: 1rem;
+    font-size: 2rem;
+  }
+}
+
+.main {
+  height: 60vh;
+  p {
+    font-size: 3rem;
+  }
+  .joke {
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: left;
+    button {
+      cursor: pointer;
+      padding: 1rem;
+    }
+    p {
+      margin-left: 1rem;
+      font-size: 1rem;
+    }
   }
 }
