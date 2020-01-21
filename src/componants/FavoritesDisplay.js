@@ -9,7 +9,7 @@ class Favorites extends React.Component {
   };
   render() {
     return (
-      <div>
+      <div class="display-fav">
         <FavoritesList
           setState={p => {
             this.setState(p);
@@ -17,7 +17,7 @@ class Favorites extends React.Component {
           favorites={this.props.favorites}
           changeCurrent={val => this.changeCurrent(val)}
         />
-        <div>{this.state.current}</div>
+        <p>{this.state.current}</p>
       </div>
     );
   }

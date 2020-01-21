@@ -10,29 +10,35 @@
   padding: 1rem;
   border-radius: 20%;
   border: none;
+  font-size: 1rem;
   margin: 1rem;
 }
 .button:hover {
-  background: red;
+  background: rgb(255, 150, 150);
 }
 
 .nav {
+  background: #000000;
   height: 10vh;
   display: flex;
   justify-content: left;
-  .input {
-    height: 100%;
-    width: 20%;
-    padding: 1rem;
+  label {
+    color: white;
     font-size: 2rem;
+    padding: 1rem;
+  }
+  .input {
+    width: 15%;
+    margin: auto;
+    margin: 1rem;
+    font-size: 3rem;
+    text-align: right;
   }
 }
 
 .main {
   height: 60vh;
-  p {
-    font-size: 3rem;
-  }
+  overflow-y: scroll;
   .joke {
     display: flex;
     padding: 1rem;
@@ -46,5 +52,44 @@
       margin-left: 1rem;
       font-size: 1rem;
     }
+  }
+}
+
+button:focus {
+  outline: 0;
+}
+
+.fav-list {
+  background: black;
+  color: white;
+}
+
+.fav-list-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.elements {
+  color: black;
+  background: white;
+  border-radius: 20%;
+  cursor: pointer;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    text-align: center;
+  }
+}
+
+.elements:hover {
+  background: rgb(255, 72, 72);
+}
+
+.display-fav {
+  background: black;
+  p {
+    color: white;
   }
 }

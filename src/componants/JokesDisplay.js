@@ -12,7 +12,6 @@ const JokesDisplay = props => {
     });
     return (
       <div class="main">
-        <p>Jokes</p>
         <div>{list}</div>
       </div>
     );

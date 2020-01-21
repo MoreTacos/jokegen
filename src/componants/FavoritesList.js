@@ -5,9 +5,10 @@ const FavoritesList = props => {
     return (
       <div
         key={el}
-        onClick={event => props.changeCurrent(event.target.innerHTML)}
+        class="elements"
+        onClick={event => props.changeCurrent(event.target.innerText)}
       >
-        {el}
+        <p>{el}</p>
       </div>
     );
   });
@@ -23,9 +24,11 @@ const FavoritesList = props => {
     </button>
   );
   return (
-    <div>
-      Favorite jokes:
-      <div>{favoriteList}</div>
+    <div class="fav-list">
+      <p>Favorite jokes:</p>
+      <div>
+        <div class="fav-list-inner">{favoriteList}</div>
+      </div>
     </div>
   );
 };
