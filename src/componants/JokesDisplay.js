@@ -5,7 +5,9 @@ const JokesDisplay = props => {
     const list = props.jokes.map(el => {
       return (
         <div class="joke" key={el.id}>
-          <button onClick={() => props.newFavorite(el.id)}>Fav</button>
+          <button class="fav" onClick={() => props.newFavorite(el.id)}>
+            Fav
+          </button>
           <p>{el.joke}</p>
         </div>
       );

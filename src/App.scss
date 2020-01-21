@@ -37,9 +37,13 @@
 }
 
 .main {
+  background: #333;
   height: 60vh;
   overflow-y: scroll;
   .joke {
+    background: #fff;
+    width: 90%;
+    margin: auto;
     display: flex;
     padding: 1rem;
     align-items: center;
@@ -62,19 +66,32 @@ button:focus {
 .fav-list {
   background: black;
   color: white;
+  p.message {
+    font-size: 2rem;
+    padding: 1rem;
+  }
 }
 
 .fav-list-inner {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  button {
+    border-radius: 20%;
+    border: none;
+    cursor: pointer;
+  }
+  button:hover {
+    background: rgb(255, 150, 150);
+  }
 }
 
 .elements {
+  height: 50px;
   color: black;
   background: white;
   border-radius: 20%;
   cursor: pointer;
-  margin: 1rem;
+  margin: 0.1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,8 +105,18 @@ button:focus {
 }
 
 .display-fav {
+  height: 30vh;
   background: black;
-  p {
+  p.joke {
     color: white;
+    font-size: 2rem;
+    padding: 1rem;
   }
+}
+
+.fav {
+  border: none;
+}
+.fav:hover {
+  background: rgb(173, 168, 168);
 }

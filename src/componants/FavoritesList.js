@@ -14,7 +14,7 @@ const FavoritesList = props => {
   });
   favoriteList.unshift(
     <button
-      className="button button-clear"
+      className="button-w"
       key="button"
       onClick={() => {
         props.setState({ current: null });
@@ -25,7 +25,7 @@ const FavoritesList = props => {
   );
   return (
     <div class="fav-list">
-      <p>Favorite jokes:</p>
+      <p class="message">Favorite jokes:</p>
       <div>
         <div class="fav-list-inner">{favoriteList}</div>
       </div>
