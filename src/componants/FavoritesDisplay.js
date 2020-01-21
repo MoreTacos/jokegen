@@ -17,7 +17,7 @@ class Favorites extends React.Component {
           favorites={this.props.favorites}
           changeCurrent={val => this.changeCurrent(val)}
         />
-        <p>{this.state.current}</p>
+        <p class="joke">{this.state.current}</p>
       </div>
     );
   }
