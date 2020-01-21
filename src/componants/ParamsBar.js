@@ -16,13 +16,23 @@ class ParamsBar extends React.Component {
 
   render() {
     return (
-      <div>
-        <button onClick={this.onClick}>Generate</button>
-        <button onClick={() => this.props.setState({ jokes: [] })}>
-          Clear
-        </button>
+      <div className="nav">
+        <div>
+          <button className="button" onClick={this.onClick}>
+            Generate
+          </button>
+          <button
+            className="button button-clear"
+            onClick={() => this.props.setState({ jokes: [] })}
+          >
+            Clear
+          </button>
+        </div>
         <form>
+          <label for="joke-number">Number of Jokes:</label>
           <input
+            id="joke-number"
+            className="input"
             onChange={this.numberChange}
             value={this.state.number}
             type="number"

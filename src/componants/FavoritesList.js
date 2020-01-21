@@ -13,6 +13,7 @@ const FavoritesList = props => {
   });
   favoriteList.unshift(
     <button
+      className="button button-clear"
       key="button"
       onClick={() => {
         props.setState({ current: null });
