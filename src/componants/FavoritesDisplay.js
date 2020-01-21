@@ -2,16 +2,21 @@ import React from 'react';
 import jokesApi from '../apis/jokes';
 import FavoritesList from './FavoritesList';
 class Favorites extends React.Component {
-  state = { current: 'Chuck is funny' };
+  state = { current: null };
   changeCurrent = async id => {
-    this.setState({ current: await jokesApi.get(`jokes/${5}`) });
+    console.log(id);
+    const joke = await jokesApi.get(`jokes/${id}`);
+    console.log(joke);
+    this.setState({ current: joke.data.value.joke });
   };
   render() {
     return (
       <div>
-        <FavoritesList />
+        <FavoritesList
+          favorites={this.props.favorites}
+          changeCurrent={val => this.changeCurrent(val)}
+        />
         <div>{this.state.current}</div>
-        {/* <button onClick={this.changeCurrent}>Click me</button> */}
       </div>
     );
   }

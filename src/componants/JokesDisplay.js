@@ -5,8 +5,8 @@ const JokesDisplay = props => {
     const list = props.jokes.data.value.map(el => {
       console.log(el.id);
       return (
-        <div id={el.id} key={el.id}>
-          <button>Fav</button>
+        <div key={el.id}>
+          <button onClick={() => props.newFavorite(el.id)}>Fav</button>
           <p>{el.joke}</p>
         </div>
       );
