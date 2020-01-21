@@ -1,9 +1,8 @@
 import React from 'react';
 
 const JokesDisplay = props => {
-  if (props.jokes.data) {
-    const list = props.jokes.data.value.map(el => {
-      console.log(el.id);
+  if (props.jokes) {
+    const list = props.jokes.map(el => {
       return (
         <div key={el.id}>
           <button onClick={() => props.newFavorite(el.id)}>Fav</button>

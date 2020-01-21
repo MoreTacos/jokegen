@@ -4,15 +4,14 @@ import FavoritesList from './FavoritesList';
 class Favorites extends React.Component {
   state = { current: null };
   changeCurrent = async id => {
-    console.log(id);
     const joke = await jokesApi.get(`jokes/${id}`);
-    console.log(joke);
     this.setState({ current: joke.data.value.joke });
   };
   render() {
     return (
       <div>
         <FavoritesList
+          setState={val => this.setState(val)}
           favorites={this.props.favorites}
           changeCurrent={val => this.changeCurrent(val)}
         />

@@ -11,6 +11,15 @@ const FavoritesList = props => {
       </div>
     );
   });
+  favoriteList.unshift(
+    <button
+      onClick={() => {
+        props.setState({ current: null });
+      }}
+    >
+      Clear
+    </button>
+  );
   return (
     <div>
       Favorite jokes:

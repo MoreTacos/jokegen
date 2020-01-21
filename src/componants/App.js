@@ -7,7 +7,12 @@ class App extends React.Component {
   state = { jokes: [], favorites: [] };
   newFavorite = value => {
     this.state.favorites.push(value);
-    this.setState({ jokes: [] });
+    const newjokes = this.state.jokes.map(el => {
+      return el.id;
+    });
+    const temp = this.state.jokes;
+    temp.splice(newjokes.indexOf(value), 1);
+    this.setState({ jokes: temp });
   };
   render() {
     return (

@@ -9,7 +9,8 @@ class ParamsBar extends React.Component {
   };
 
   onClick = async () => {
-    const jokes = await jokesApi.get(`jokes/random/${this.state.number}`);
+    const jokes = (await jokesApi.get(`jokes/random/${this.state.number}`)).data
+      .value;
     this.props.setState({ jokes });
   };
 
@@ -17,6 +18,11 @@ class ParamsBar extends React.Component {
     return (
       <div>
         <button onClick={this.onClick}>Generate</button>
+        <button
+          onClick={() => this.props.setState({ jokes: [], favorites: [] })}
+        >
+          Clear
+        </button>
         <form>
           <input
             onChange={this.numberChange}
