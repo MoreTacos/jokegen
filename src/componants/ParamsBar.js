@@ -18,9 +18,7 @@ class ParamsBar extends React.Component {
     return (
       <div>
         <button onClick={this.onClick}>Generate</button>
-        <button
-          onClick={() => this.props.setState({ jokes: [], favorites: [] })}
-        >
+        <button onClick={() => this.props.setState({ jokes: [] })}>
           Clear
         </button>
         <form>

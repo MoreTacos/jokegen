@@ -11,7 +11,9 @@ class Favorites extends React.Component {
     return (
       <div>
         <FavoritesList
-          setState={val => this.setState(val)}
+          setState={p => {
+            this.setState(p);
+          }}
           favorites={this.props.favorites}
           changeCurrent={val => this.changeCurrent(val)}
         />
