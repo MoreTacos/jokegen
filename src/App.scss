@@ -4,7 +4,7 @@
   box-sizing: border-box;
   font-family: 'Courier New', Courier, monospace;
 }
-
+// Button/Utilities
 .button {
   cursor: pointer;
   padding: 1rem;
@@ -16,7 +16,7 @@
 .button:hover {
   background: rgb(255, 150, 150);
 }
-
+// Navbar
 .nav {
   background: #000000;
   height: 10vh;
@@ -36,6 +36,7 @@
   }
 }
 
+// MAIN section
 .main {
   background: #333;
   height: 60vh;
