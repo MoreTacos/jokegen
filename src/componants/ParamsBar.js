@@ -1,13 +1,16 @@
 import React from 'react';
 import jokesApi from '../apis/jokes';
 
+// Main params bar
+//
+
 class ParamsBar extends React.Component {
   state = { number: 1 };
 
   numberChange = event => {
     this.setState({ number: event.target.value });
   };
-
+  // On click
   onClick = async () => {
     const jokes = (await jokesApi.get(`jokes/random/${this.state.number}`)).data
       .value;

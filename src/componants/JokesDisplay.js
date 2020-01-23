@@ -1,5 +1,5 @@
 import React from 'react';
-
+// The joke display region
 const JokesDisplay = props => {
   if (props.jokes) {
     const list = props.jokes.map(el => {
