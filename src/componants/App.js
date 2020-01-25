@@ -16,7 +16,7 @@ class App extends React.Component {
   };
   render() {
     return (
-      <div>
+      <div class="container">
         <ParamsBar
           setState={p => {
             this.setState(p);
