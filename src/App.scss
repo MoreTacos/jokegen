@@ -4,6 +4,10 @@
   box-sizing: border-box;
   font-family: 'Courier New', Courier, monospace;
 }
+
+body {
+  background: #0069a7;
+}
 // Button/Utilities
 .button {
   cursor: pointer;
@@ -14,11 +18,11 @@
   margin: 1rem;
 }
 .button:hover {
-  background: rgb(255, 150, 150);
+  background: rgb(55, 156, 251);
 }
 // Navbar
 .nav {
-  background: #000000;
+  background: #092962;
   height: 10vh;
   display: flex;
   justify-content: left;
@@ -38,11 +42,11 @@
 
 // MAIN section
 .main {
-  background: #333333;
+  background: #091f2c;
   height: 60vh;
   overflow-y: scroll;
   .joke {
-    background: #fff444;
+    background: #48a6d1;
     width: 90%;
     margin: auto;
     display: flex;
@@ -82,7 +86,7 @@ button:focus {
     cursor: pointer;
   }
   button:hover {
-    background: rgb(255, 150, 150);
+    background: rgb(55, 156, 251);
   }
 }
 
@@ -102,7 +106,7 @@ button:focus {
 }
 
 .elements:hover {
-  background: rgb(255, 72, 72);
+  background: rgb(55, 156, 251);
 }
 
 .display-fav {
